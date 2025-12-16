@@ -1,0 +1,42 @@
+# ---- Secrets -----------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ---- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Testing / type checking / lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+
+# ---- Local data / artifacts --------------------------------------------------
+# Chroma persistent DB (rebuildable)
+chroma_langchain_db/
+
+# Local documents / datasets (often large)
+user_data/
+
+# Build / packaging
+dist/
+build/
+*.egg-info/
+.dist/
+
+# ---- OS / Editor -------------------------------------------------------------
+.DS_Store
+.idea/
+
+# Accidental nested repo (if present)
+hello_agent/
