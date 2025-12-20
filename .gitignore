@@ -26,7 +26,10 @@ coverage.xml
 chroma_langchain_db/
 
 # Local documents / datasets (often large)
-user_data/
+user_data/*
+!user_data/documents/
+user_data/documents/*
+!user_data/documents/.gitkeep
 
 # Build / packaging
 dist/
