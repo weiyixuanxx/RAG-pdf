@@ -40,3 +40,6 @@ streamlit run streamlit_app.py
 ```
 
 首次运行如果需要建库，会下载 embedding 模型并生成 `chroma_langchain_db/`（本地持久化向量库）。
+
+## Demo 截图
+![demo](image.png)
