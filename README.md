@@ -1,3 +1,15 @@
+基于 LangChain 1.1.2 框架的 Agentic RAG 智能文献阅读助手 
+技术栈：Python、LangChain 1.1.2、LangGraph、ChromaDB、Sentence-Transformers、Streamlit、Deep Seek
+• 设计并实现了完整的端到端 RAG，包括：PDF 文档加载、清洗、切分（chunking），向量数据库检索
+设计，调用 DeepSeek API 生成回答并输出引用上下文。
+• 基于Agent + Tool + Memory 架构搭建交互：将 RAG 检索封装为工具供 Agent 调用，使用 LangGraph
+MemorySaver 维护会话记忆，Streamlit 提供聊天 UI 与建库控制。
+创新点：
+• 实现特定 PDF 加载功能：引入特定模块 PDFPlumberLoader 加载 PDF ，进行完整的数据清洗，在
+chunking 后过滤目录、章节标题等低信息噪声片段，从而提升检索质量。
+• 实现迭代检索：每一次检索过程设计为多轮检索和生成，每一次迭代检索完成后，由 LLM 决定是否
+继续检索，以及生成下次检索所需关键词，从而提高回答完整性与正确率。
+
 # RAG-pdf
 RAG 智能 PDF 阅读助手（Streamlit + LangChain + Chroma）
 
